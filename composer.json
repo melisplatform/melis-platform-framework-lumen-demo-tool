@@ -1,12 +1,12 @@
 {
-  "name": "melisplatform/melis-code-example-lumen",
+  "name": "melisplatform/melis-platform-framework-lumen-demo-tool",
   "description": "Melis Platform Code Example Lumen module",
   "type": "melisplatform-module",
   "license": "OSL-3.0",
-  "homepage": "https://github.com/melisplatform/melis-code-example-lumen",
+  "homepage": "https://github.com/melisplatform/melis-platform-framework-lumen-demo-tool",
   "support": {
-    "source": "https://github.com/melisplatform/melis-code-example-lumen",
-    "issues": "https://github.com/melisplatform/melis-code-example-lumen/issues"
+    "source": "https://github.com/melisplatform/melis-platform-framework-lumen-demo-tool",
+    "issues": "https://github.com/melisplatform/melis-platform-framework-lumen-demo-tool/issues"
   },
   "keywords": [
     "cms",
@@ -15,7 +15,7 @@
     "module"
   ],
   "extra": {
-    "module-name": "MelisCodeExampleLumen",
+    "module-name": "MelisPlatformFrameworkLumenDemoTool",
     "dbdeploy": true,
     "melis-site": false,
     "melis-module-category": "core"
