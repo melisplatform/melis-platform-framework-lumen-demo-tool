@@ -1,8 +1,12 @@
 <?php
 return [
+    'third-party-framework' => [
+        'index-path' => [
+            '/Lumen/public/index.php'
+        ]
+    ],
     'router' => [
         'routes' => [
-
             'melis-backoffice' => [
                 'child_routes' => [
                     'application-MelisPlatformFrameworkLumenDemoTool' => array(
