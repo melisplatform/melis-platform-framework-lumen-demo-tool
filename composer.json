@@ -17,16 +17,7 @@
   "extra": {
     "module-name": "MelisPlatformFrameworkLumenDemoTool",
     "dbdeploy": true,
-    "melis-site": false,
     "melis-module-category": "core"
-  },
-  "require": {
-    "php": "^7.0",
-    "ext-openssl": "*",
-    "ext-json": "*",
-    "ext-pdo_mysql": "*",
-    "melisplatform/melis-core": "*",
-    "justinrainbow/json-schema": "5.2.1"
   },
   "autoload": {
     "psr-4": {

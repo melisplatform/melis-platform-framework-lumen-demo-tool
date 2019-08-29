@@ -2,7 +2,7 @@
 return [
     'third-party-framework' => [
         'index-path' => [
-            '/Lumen/public/index.php'
+            '/mylumen/public/index.php'
         ]
     ],
     'router' => [
@@ -60,9 +60,6 @@ return [
         'display_not_found_reason' => true,
         'display_exceptions'       => true,
         'doctype'                  => 'HTML5',
-        'template_map' => array(
-            'empty/error' => __DIR__ . '/../view/error/no-route-match-zend.phtml',
-        ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
         ),
