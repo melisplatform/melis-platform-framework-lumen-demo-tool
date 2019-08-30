@@ -14,6 +14,9 @@
     "zf2",
     "module"
   ],
+  "require" : {
+      "melisplatform/melis-platform-frameworks" : "*"
+  },
   "extra": {
     "module-name": "MelisPlatformFrameworkLumenDemoTool",
     "dbdeploy": true,
