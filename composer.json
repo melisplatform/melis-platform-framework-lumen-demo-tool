@@ -15,7 +15,7 @@
     "module"
   ],
   "require" : {
-      "melisplatform/melis-platform-frameworks" : "*"
+      "melisplatform/melis-platform-frameworks-lumen-demo-tool-logic" : "*"
   },
   "extra": {
     "module-name": "MelisPlatformFrameworkLumenDemoTool",
