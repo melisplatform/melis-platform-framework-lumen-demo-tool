@@ -2,7 +2,7 @@
 return [
     'third-party-framework' => [
         'index-path' => [
-            '/mylumen/public/index.php'
+            '/Lumen/public/index.php'
         ]
     ],
     'router' => [
