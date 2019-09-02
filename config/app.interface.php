@@ -46,7 +46,6 @@ return [
                        'module' => 'MelisPlatformFrameworkLumenDemoTool',
                        'controller' => 'LumenDemoTool',
                        'action'     => 'render-lumen',
-                       'lumen_url'  => '/lumen'
                    ]
                ]
            ]
