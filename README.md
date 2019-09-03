@@ -14,17 +14,28 @@ composer require melisplatform/melis-platform-framework-lumen-demo-tool
 
 ### Configuration
 
-This module also configured to access the Lumen framework inside directory of /thirdparty by just adding this data to the array inside config/module.coonfig.php file
+This module is also configured to access the Lumen framework inside the directory of ``/thirdparty`` by just adding the data to the array inside config/module.config.php file :
 
 ```
 return [
   'third-party-framework' => [
      'index-path' => [
-        '/mylumen/public/index.php'
+        '/Lumen/public/index.php'
      ]
    ],
    ...
 ]
 ```
 
-The module will determine the execution of the third party by providing the path of the index.php file.
+The module will determine the execution of the third party by providing the path of the ``index.php`` file.
+
+## Authors
+
+* **Melis Technology** - [www.melistechnology.com](https://www.melistechnology.com/)
+
+See also the list of [contributors](https://github.com/melisplatform/melis-core/contributors) who participated in this project.
+
+
+## License
+
+This project is licensed under the OSL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details
