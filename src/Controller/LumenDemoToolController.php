@@ -6,7 +6,7 @@ use Zend\View\Model\ViewModel;
 
 class LumenDemoToolController extends AbstractActionController
 {
-    private $lumenUrl = "/melis/lumen";
+    private $lumenUrl = "/melis/lumen-list";
     /**
      * Through this function lumen microframework will render
      * @return ViewModel
