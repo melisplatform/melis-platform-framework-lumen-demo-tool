@@ -9,4 +9,7 @@ return [
     'tr_melis_lumen_demo_tool_sample_2_heading' => 'Le tableau ci-dessous affiche les données extraites des services de Melis Platform en utilisant Lumen.',
     'tr_melis_lumen_table1_heading_name' => 'Nom',
     'tr_melis_lumen_table1_heading_songs' => 'Chansons',
+    'tr_melis_lumen_table1_heading_songs_head_album' => 'Album List',
+    'tr_melis_lumen_table1_heading_songs_head_language' => 'Language List',
+
 ];
