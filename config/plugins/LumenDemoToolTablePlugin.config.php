@@ -18,7 +18,7 @@ return array(
                     'melis' => array(
                         'section' => 'MelisCore',
                         'name' => 'Lumen Demo Tool Table Plugin',
-//                        'thumbnail' => '/MelisFront/plugins/images/MelisFrontBlockPlugin_thumb.jpg',
+                        'thumbnail' => '/MelisPlatformFrameworkLumenDemoTool/plugins/images/LumenDemoToolDisplayTable_thumb.jpg',
                         'description' => 'Lumen demo tool display table plugin',
                         // List the files to be automatically included for the correct display of the plugin
                         // To overide a key, just add it again in your site module
