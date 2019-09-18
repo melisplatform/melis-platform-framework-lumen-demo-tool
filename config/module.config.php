@@ -44,6 +44,11 @@ return [
     'translator' => [
         'loacle' => 'en_EN'
     ],
+    'controller_plugins' => [
+        'invokables' => [
+            'LumenDemoToolDisplayTablePlugin' => 'MelisPlatformFrameworkLumenDemoTool\Controller\Plugin\LumenDemoToolDisplayTablePlugin'
+        ]
+    ],
     'controllers' => [
         'invokables' => [
             'MelisPlatformFrameworkLumenDemoTool\Controller\LumenDemoTool' => 'MelisPlatformFrameworkLumenDemoTool\Controller\LumenDemoToolController',
@@ -60,6 +65,9 @@ return [
         'display_not_found_reason' => true,
         'display_exceptions'       => true,
         'doctype'                  => 'HTML5',
+        'template_map' => [
+            'MelisLumenDemotool/render-plugin' => __DIR__ . "/../view/melis-platform-framework-lumen-demo-tool/plugins/render-plugin.phtml"
+        ],
         'template_path_stack' => array(
             __DIR__ . '/../view',
         ),
