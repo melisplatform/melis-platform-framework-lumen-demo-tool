@@ -41,7 +41,7 @@ use MelisEngine\Controller\Plugin\MelisTemplatingPlugin;
  */
 class LumenDemoToolDisplayTablePlugin extends MelisTemplatingPlugin
 {
-    private $lumenRoute = "/melis/lumen-list";
+    private $lumenRoute = "/melis/lumen-plugin";
 
     public function __construct($updatesPluginConfig = [])
     {

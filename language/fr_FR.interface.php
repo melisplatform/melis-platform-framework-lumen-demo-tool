@@ -11,5 +11,11 @@ return [
     'tr_melis_lumen_table1_heading_songs' => 'Chansons',
     'tr_melis_lumen_table1_heading_songs_head_album' => 'Album List',
     'tr_melis_lumen_table1_heading_songs_head_language' => 'Language List',
+    /*
+     * Plugin translations
+     */
+    'tr_melis_platform_framework_lumen_demo_tool_plugin_name' => 'Album list',
+    'tr_melis_platform_framework_lumen_demo_tool_plugin_description' => 'Ce plugin affiche du contenu tiré de Lumen.',
+    'tr_PluginSection_melisplatformframeworklumendemotool' => 'Melis Platform Framework Lumen Demo Tool'
 
 ];

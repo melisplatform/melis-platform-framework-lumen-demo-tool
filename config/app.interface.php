@@ -33,6 +33,30 @@ return [
                'name' => 'tr_melis_code_example_lumen',
                'rightsDisplay' => 'none'
            ],
+           'ressources' => array(
+               'js' => array(
+                   '/MelisPlatformFrameworkLumenDemoTool/js/lumen-demo-tool-script.js'
+               ),
+               'css' => array(
+                   '/MelisPlatformFrameworkLumenDemoTool/css/lumen-demo-tool-style.css',
+               ),
+               /**
+                * the "build" configuration compiles all assets into one file to make
+                * lesser requests
+                */
+               'build' => [
+                   'disable_bundle' => false,
+                   // lists of assets that will be loaded in the layout
+                   'css' => [
+                       '/MelisPlatformFrameworkLumenDemoTool/build/css/bundle.css',
+
+                   ],
+                   'js' => [
+                       '/MelisPlatformFrameworkLumenDemoTool/build/js/bundle.js',
+                   ]
+               ]
+
+           ),
            'interface' => [
                'melis_platform_framework_lumen_demo_tool' => [
                    'conf' => [

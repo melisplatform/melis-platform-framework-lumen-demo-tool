@@ -14,23 +14,36 @@ return array(
                          * template path
                          */
                         'template_path' => array('MelisLumenDemotool/render-plugin'),
+                        'files' => [
+                            'css' => [
+                                '/MelisPlatformFrameworkLumenDemoTool/plugins/css/lumen-demo-tool-table-plugin.css'
+                            ],
+                            'js' => [],
+                        ],
                     ),
                     'melis' => array(
-                        'subcategory' => array(
-                            'id' => 'thirdPartyFrameworks',
-                            'title' => 'Frameworks'
-                        ),
-                        'name' => 'Lumen Demo Tool Table Plugin',
+                        'section' => 'MelisCms',
+//                        'subcategory' => array(
+//                            'id' => 'thirdPartyFrameworks',
+//                            'title' => 'Frameworks'
+//                        ),
+                        'name' => 'tr_melis_platform_framework_lumen_demo_tool_plugin_name',
                         'thumbnail' => '/MelisPlatformFrameworkLumenDemoTool/plugins/images/LumenDemoToolDisplayTable_thumb.jpg',
-                        'description' => 'Lumen demo tool display table plugin',
+                        'description' => 'tr_melis_platform_framework_lumen_demo_tool_plugin_description',
                         // List the files to be automatically included for the correct display of the plugin
                         // To overide a key, just add it again in your site module
                         // To delete an entry, use the keyword "disable" instead of the file path for the same key
                         'files' => [
-                            'css' => [],
+                            'css' => [
+                                '/MelisPlatformFrameworkLumenDemoTool/plugins/css/lumen-demo-tool-table-plugin.css'
+                            ],
                             'js' => [],
                         ],
                         'js_initialization' => [],
+                        'modal_form' => [
+                            'tab_title' => 'tr_meliscmsnews_plugin_tab_properties',
+                            'tab_icon' => 'fa fa-cog',
+                        ]
                     ),
                 ),
             ),
