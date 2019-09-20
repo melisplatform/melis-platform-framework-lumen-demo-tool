@@ -23,10 +23,10 @@ return array(
                     ),
                     'melis' => array(
                         'section' => 'MelisCms',
-//                        'subcategory' => array(
-//                            'id' => 'thirdPartyFrameworks',
-//                            'title' => 'Frameworks'
-//                        ),
+                        'subcategory' => array(
+                            'id' => 'thirdPartyFrameworks',
+                            'title' => 'Frameworks'
+                        ),
                         'name' => 'tr_melis_platform_framework_lumen_demo_tool_plugin_name',
                         'thumbnail' => '/MelisPlatformFrameworkLumenDemoTool/plugins/images/LumenDemoToolDisplayTable_thumb.jpg',
                         'description' => 'tr_melis_platform_framework_lumen_demo_tool_plugin_description',
