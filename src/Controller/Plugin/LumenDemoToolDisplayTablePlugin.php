@@ -66,8 +66,14 @@ class LumenDemoToolDisplayTablePlugin extends MelisTemplatingPlugin
         /*
          * construct view variables
          */
+        $pluginData = $this->getFormData();
+        // get preview mode
+        $pluginData['previewMode'] = $this->previewMode;
+        // get render mode
+        $pluginData['renderMode'] = $this->renderMode;
         $viewVariables = [
-            'lumenContent' => $lumenContent
+            'lumenContent' => $lumenContent,
+            'pluginData'   => $pluginData
         ];
 
         return $viewVariables;
@@ -117,8 +123,23 @@ class LumenDemoToolDisplayTablePlugin extends MelisTemplatingPlugin
         if (!empty($parameters['lumen_route']))
             $xmlValueFormatted .= "\t\t" . '<lumen_route><![CDATA[' . $parameters['lumen_route'] . ']]></lumen_route>';
 
+        // for resizing
+        $widthDesktop = null;
+        $widthMobile   = null;
+        $widthTablet  = null;
+        if (! empty($parameters['melisPluginDesktopWidth'])) {
+            $widthDesktop =  " width_desktop=\"" . $parameters['melisPluginDesktopWidth'] . "\" ";
+        }
+        if (! empty($parameters['melisPluginMobileWidth'])) {
+            $widthMobile =  "width_mobile=\"" . $parameters['melisPluginMobileWidth'] . "\" ";
+        }
+        if (! empty($parameters['melisPluginTabletWidth'])) {
+            $widthTablet =  "width_tablet=\"" . $parameters['melisPluginTabletWidth'] . "\" ";
+        }
+
+
         // Something has been saved, let's generate an XML for DB
-        $xmlValueFormatted = "\t" . '<' . $this->pluginXmlDbKey . ' id="' . $parameters['melisPluginId'] . '">' .
+        $xmlValueFormatted = "\t" . '<' . $this->pluginXmlDbKey . ' id="' . $parameters['melisPluginId'] . '"' .$widthDesktop . $widthMobile . $widthTablet . '>' .
             $xmlValueFormatted .
             "\t" . '</' . $this->pluginXmlDbKey . '>' . "\n";
 
