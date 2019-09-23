@@ -66,7 +66,8 @@ return [
         'display_exceptions'       => true,
         'doctype'                  => 'HTML5',
         'template_map' => [
-            'MelisLumenDemotool/render-plugin' => __DIR__ . "/../view/melis-platform-framework-lumen-demo-tool/plugins/render-plugin.phtml"
+            'MelisLumenDemotool/render-plugin' => __DIR__ . "/../view/melis-platform-framework-lumen-demo-tool/plugins/render-plugin.phtml",
+            'MelisLumenDemotool/modal-plugin' => __DIR__ . "/../view/melis-platform-framework-lumen-demo-tool/plugins/modal-template.phtml"
         ],
         'template_path_stack' => array(
             __DIR__ . '/../view',

@@ -14,8 +14,9 @@ return [
     /*
     * Plugin translations
     */
-    'tr_melis_platform_framework_lumen_demo_tool_plugin_name' => 'Album list',
+    'tr_melis_platform_framework_lumen_demo_tool_plugin_name' => 'Lumen Demo Plugin',
     'tr_melis_platform_framework_lumen_demo_tool_plugin_description' => 'This plugin displays content requested from Lumen.',
-    'tr_PluginSection_melisplatformframeworklumendemotool' => 'Melis Platform Framework Lumen Demo Tool'
+    'tr_PluginSection_melisplatformframeworklumendemotool' => 'Melis Platform Framework Lumen Demo Tool',
+    'tr_modal_plugin_no_parameters' => 'No parameters to edit.'
 
 ];

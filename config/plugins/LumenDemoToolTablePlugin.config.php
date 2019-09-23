@@ -41,8 +41,11 @@ return array(
                         ],
                         'js_initialization' => [],
                         'modal_form' => [
-                            'tab_title' => 'tr_meliscmsnews_plugin_tab_properties',
-                            'tab_icon' => 'fa fa-cog',
+                            'melis_platform_framework_lumen_demo_tool' => [
+                                'tab_title' => 'tr_meliscmsnews_plugin_tab_properties',
+                                'tab_icon' => 'fa fa-cog',
+                                'tab_form_layout' => 'MelisLumenDemotool/modal-plugin'
+                            ],
                         ]
                     ),
                 ),
