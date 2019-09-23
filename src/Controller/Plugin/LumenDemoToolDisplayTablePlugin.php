@@ -115,7 +115,8 @@ class LumenDemoToolDisplayTablePlugin extends MelisTemplatingPlugin
                     array_push($render, [
                             'name' => $config['tab_title'],
                             'icon' => $config['tab_icon'],
-                            'html' => $html
+                            'html' => $html,
+                            'empty' => 'Empty'
                         ]
                     );
                 }
