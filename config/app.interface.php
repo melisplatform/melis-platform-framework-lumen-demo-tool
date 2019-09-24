@@ -11,6 +11,12 @@ return [
                                'meliscore_tool_creatrion_designs' => [
                                    'interface' => [
                                        'meliscore_tool_tools' => [
+                                           'conf' => [
+                                               'id' => 'id_meliscore_tool_tools',
+                                               'melisKey' => 'meliscore_tool_tools',
+                                               'name' => 'tr_meliscore_tool_tools',
+                                               'icon' => 'fa fa-magic',
+                                           ],
                                            'interface' => [
                                                'melis_platform_framework_lumen_demo' =>  [
                                                     'conf' => [
@@ -64,12 +70,37 @@ return [
                        'melisKey' => 'melis_platform_framework_lumen_demo_tool',
                        'name' => 'tr_melis_code_example_lumen_tool_title',
                        'icon' => 'fa fa-lightbulb-o',
-                       'useLumenDb' => false,
                    ],
                    'forward' => [
                        'module' => 'MelisPlatformFrameworkLumenDemoTool',
                        'controller' => 'LumenDemoTool',
                        'action'     => 'render-lumen',
+                   ]
+               ],
+               'melis_platform_framework_lumen_demo_tool_modal' => [
+                   'conf' => [
+                       'id' => 'melis_platform_framework_lumen_demo_tool_modal',
+                       'melisKey' => 'melis_platform_framework_lumen_demo_tool_modal',
+                       'name' => 'tr_melis_platform_framework_lumen_demo_tool_modal',
+                   ],
+                   'forward' => [
+                       'module' => 'MelisPlatformFrameworkLumenDemoTool',
+                       'controller' => 'LumenDemoTool',
+                       'action'     => 'render-lumen-album-modal',
+                   ],
+                   'interface' => [
+                       'melis_platform_framework_lumen_demo_tool_modal_content' => [
+                           'conf' => [
+                               'id' => 'melis_platform_framework_lumen_demo_tool_modal_content',
+                               'melisKey' => 'melis_platform_framework_lumen_demo_tool_modal_content',
+                               'name' => 'tr_melis_platform_framework_lumen_demo_tool_modal_content',
+                           ],
+                           'forward' => [
+                               'module' => 'MelisPlatformFrameworkLumenDemoTool',
+                               'controller' => 'LumenDemoTool',
+                               'action'     => 'render-lumen-album-modal-content',
+                           ]
+                       ]
                    ]
                ]
            ]
