@@ -25,6 +25,40 @@ class LumenDemoToolController extends AbstractActionController
         $frameworksService->setRoute($this->lumenUrl);
         // get content
         $view->lumen = $frameworksService->getContent();
+        $view->melisKey = $this->params()->fromRoute('melisKey','');
+
+        return $view;
+    }
+
+    public function renderLumenAlbumModalAction()
+    {
+        $id = $this->params()->fromRoute('id', $this->params()->fromQuery('id', ''));
+
+        $melisKey = $this->params()->fromRoute('melisKey', '');
+        $title    = 'Lumen Album';
+        $data     = array();
+
+        $view = new ViewModel();
+
+        $view->melisKey = $melisKey;
+        $view->title    = $title;
+
+        return $view;
+    }
+    public function renderLUmenAlbumModalContentAction()
+    {
+        $view = new ViewModel();
+        /**
+         * melis platform frameworks service
+         *
+         * @var \MelisPlatformFrameworks\Service\MelisPlatformService $frameworksService
+         */
+        $frameworksService = $this->getServiceLocator()->get('MelisPlatformService');
+        $route = '/melis/lumen-get-album-form';
+        // set url
+        $frameworksService->setRoute($route);
+        // set a variable
+        $view->lumenContent = $frameworksService->getContent();
 
         return $view;
     }

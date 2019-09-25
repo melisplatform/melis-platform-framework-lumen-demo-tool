@@ -1,1 +1,1 @@
-var melisPlatformFrameworkLumenDemoTool={staticModal:"",saveAlbumData:function(o){console.log(o)},getAddAlbumForm:function(o){}};!function(o){body.on("click",".add-lumen-album",function(){melisPlatformFrameworkLumenDemoTool.getAddAlbumForm()})}(jQuery);
+var melisPlatformFrameworkLumenDemoTool={staticModal:"",saveAlbumData:function(o){console.log(o)},getAddAlbumForm:function(o){}};!function(o){o("body").on("click",".add-lumen-album",function(){melisPlatformFrameworkLumenDemoTool.getAddAlbumForm()})}(jQuery);
