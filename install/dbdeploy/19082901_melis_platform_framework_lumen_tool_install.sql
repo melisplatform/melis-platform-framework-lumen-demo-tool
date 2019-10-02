@@ -13,13 +13,18 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `melis_demo_album_table_lumen`
+-- Table structure for table `melis_demo_album`
 --
 
-CREATE TABLE `melis_demo_album_table_lumen` (
+CREATE TABLE `melis_demo_album` (
   `alb_id` int(11) NOT NULL,
   `alb_name` varchar(255) NOT NULL,
   `alb_date` date NOT NULL,
@@ -27,10 +32,10 @@ CREATE TABLE `melis_demo_album_table_lumen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `melis_demo_album_table_lumen`
+-- Dumping data for table `melis_demo_album`
 --
 
-INSERT INTO `melis_demo_album_table_lumen` (`alb_id`, `alb_name`, `alb_date`, `alb_song_num`) VALUES
+INSERT INTO `melis_demo_album` (`alb_id`, `alb_name`, `alb_date`, `alb_song_num`) VALUES
 (1, 'Judas', '2019-07-22', 1),
 (2, 'Priest', '2019-07-17', 2),
 (3, 'Parachute', '2019-07-22', 2),
@@ -42,9 +47,9 @@ INSERT INTO `melis_demo_album_table_lumen` (`alb_id`, `alb_name`, `alb_date`, `a
 --
 
 --
--- Indexes for table `melis_demo_album_table_lumen`
+-- Indexes for table `melis_demo_album`
 --
-ALTER TABLE `melis_demo_album_table_lumen`
+ALTER TABLE `melis_demo_album`
   ADD PRIMARY KEY (`alb_id`);
 
 --
@@ -52,9 +57,9 @@ ALTER TABLE `melis_demo_album_table_lumen`
 --
 
 --
--- AUTO_INCREMENT for table `melis_demo_album_table_lumen`
+-- AUTO_INCREMENT for table `melis_demo_album`
 --
-ALTER TABLE `melis_demo_album_table_lumen`
+ALTER TABLE `melis_demo_album`
   MODIFY `alb_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
