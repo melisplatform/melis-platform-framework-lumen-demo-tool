@@ -45,8 +45,11 @@ class LumenDemoToolController extends AbstractActionController
 
         return $view;
     }
+    
     public function renderLUmenAlbumModalContentAction()
     {
+        $albumId = $this->getRequest()->getQuery('albumId');
+
         $view = new ViewModel();
         /**
          * melis platform frameworks service
@@ -54,7 +57,7 @@ class LumenDemoToolController extends AbstractActionController
          * @var \MelisPlatformFrameworks\Service\MelisPlatformService $frameworksService
          */
         $frameworksService = $this->getServiceLocator()->get('MelisPlatformService');
-        $route = '/melis/lumen-get-album-form';
+        $route = '/melis/lumen-get-album-form?albumId=' . $albumId;
         // set url
         $frameworksService->setRoute($route);
         // set a variable
