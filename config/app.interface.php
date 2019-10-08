@@ -9,6 +9,12 @@ return [
                        'meliscore_toolstree_section' => [
                            'interface' => [
                                'meliscore_tool_creatrion_designs' => [
+                                  'conf' => [
+                                         'id' => 'id_meliscore_tool_creatrion_designs',
+                                         'melisKey' => 'meliscore_tool_creatrion_designs',
+                                         'name' => 'tr_meliscore_tool_creatrion_designs',
+                                         'icon' => 'fa fa-paint-brush',
+                                     ],
                                    'interface' => [
                                        'meliscore_tool_tools' => [
                                            'conf' => [
