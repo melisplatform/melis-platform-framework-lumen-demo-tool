@@ -1,5 +1,6 @@
 
 var melisPlatformFrameworkLumenDemoTool = {
+    tempLoader    : "<div id=\"loader\" class=\"overlay-loader\"><img class=\"loader-icon spinning-cog\" src=\"/MelisCore/assets/images/cog12.svg\" data-cog=\"cog12\"></div>",
     refreshTool   : function(){
         melisHelper.zoneReload('id_melis_platform_framework_lumen_demo_tool', 'melis_platform_framework_lumen_demo_tool')
     },
@@ -74,7 +75,7 @@ var melisPlatformFrameworkLumenDemoTool = {
         melisHelper.createModal(zoneIdLumen,melisKey,true,[],modalUrlLumen)
     });
     bodyLumen.on('click', ".btnEditLumenAlbum", function(){
-        var id = $(this).data('id');
+        var id = $(this).parent().parent().parent().attr('id');
         var btn = $(this);
         // disable button
         btn.attr('disabled','disabled');
@@ -92,6 +93,7 @@ var melisPlatformFrameworkLumenDemoTool = {
         var formData = $(this).serializeArray();
         melisPlatformFrameworkLumenDemoTool.saveAlbumData(formData,function(){
             $(".lumen-modal-close").trigger('click');
+            // reload the tool
             melisPlatformFrameworkLumenDemoTool.refreshTool();
         },function(){
             saveBtn.removeAttr('disabled')
@@ -100,13 +102,15 @@ var melisPlatformFrameworkLumenDemoTool = {
     });
 
     bodyLumen.on('click', ".btnDelLumenAlbum", function(){
-        var id = $(this).data('id');
+        var id = $(this).parent().parent().parent().attr('id');
         melisCoreTool.confirm(
             translations.tr_meliscore_common_yes,
             translations.tr_meliscore_common_no,
             translations.tr_melis_lumen_notification_title,
             translations.tr_melis_lumen_notification_message_delete_message,
             function () {
+                // append loader
+                $('#id_melis_platform_framework_lumen_demo_tool').append(melisPlatformFrameworkLumenDemoTool.tempLoader);
                 melisPlatformFrameworkLumenDemoTool.deleteAlbum(id,function(){
                     // refresh tool
                     melisPlatformFrameworkLumenDemoTool.refreshTool();
