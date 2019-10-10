@@ -8,7 +8,9 @@ return [
     'tr_melis_lumen_demo_tool_sample_1_heading' => 'The table below shows the data fetched from the database using Lumen.',
     'tr_melis_lumen_demo_tool_sample_2_heading' => 'The table below shows the data fetched from Melis Platform Services using Lumen.',
     'tr_melis_lumen_table1_heading_name' => 'Name',
+    'tr_melis_lumen_table1_heading_name tooltip' => 'Name of the album',
     'tr_melis_lumen_table1_heading_songs' => 'Songs',
+    'tr_melis_lumen_table1_heading_songs tooltip' => 'Number of songs',
     'tr_melis_lumen_table1_heading_songs_head_album' => 'Album List',
     'tr_melis_lumen_table1_heading_songs_head_language' => 'Language List',
     /*
@@ -23,6 +25,9 @@ return [
     'tr_melis_lumen_notification_empty_name' => 'Please enter the album name',
     'tr_melis_lumen_notification_empty_name_regex' => 'No special character(s) allowed',
     'tr_melis_lumen_notification_songs_not_int' => 'Songs must be an integer',
+    # modal
+    'tr_melis_lumen_modal_add_title' => 'Add album',
+    'tr_melis_lumen_modal_edit_title' => 'Edit album',
     /*
     * Plugin translations
     */

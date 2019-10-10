@@ -34,8 +34,9 @@ var melisPlatformFrameworkLumenDemoTool = {
             melisCore.flashMessenger();
 
         });
-    },
+    },t
     deleteAlbum : function(id, callback){
+
         if (typeof(callback) ==='undefined') callback = null;
         $.ajax({
             type        : 'POST',
@@ -100,7 +101,9 @@ var melisPlatformFrameworkLumenDemoTool = {
         });
 
     });
-
+    /*
+     * delete an album
+     */
     bodyLumen.on('click', ".btnDelLumenAlbum", function(){
         var id = $(this).parent().parent().parent().attr('id');
         melisCoreTool.confirm(
@@ -110,13 +113,18 @@ var melisPlatformFrameworkLumenDemoTool = {
             translations.tr_melis_lumen_notification_message_delete_message,
             function () {
                 // append loader
-                $('#id_melis_platform_framework_lumen_demo_tool').append(melisPlatformFrameworkLumenDemoTool.tempLoader);
                 melisPlatformFrameworkLumenDemoTool.deleteAlbum(id,function(){
                     // refresh tool
                     melisPlatformFrameworkLumenDemoTool.refreshTool();
                 });
             }
         );
+    });
+    /*
+     * refresh tool
+     */
+    bodyLumen.on('click', '.melis-lumen-refresh', function(){
+        melisPlatformFrameworkLumenDemoTool.refreshTool();
     });
 
 })(jQuery);
