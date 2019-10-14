@@ -14,6 +14,29 @@ return [
     'tr_melis_lumen_table1_heading_songs_head_album' => 'Album List',
     'tr_melis_lumen_table1_heading_songs_head_language' => 'Language List',
     /*
+     * tool notification
+     */
+    'tr_melis_lumen_notification_title' => 'Supprimer un album',
+    'tr_melis_lumen_notification_message_save_ko' => 'Unable to save album',
+    'tr_melis_lumen_notification_message_save_ok' => 'Album successfully saved',
+    'tr_melis_lumen_notification_message_update_ko' => 'Unable to update album',
+    'tr_melis_lumen_notification_message_upate_ok' => 'Album succesfully updated',
+    'tr_melis_lumen_notification_message_delete_message' => 'Etes-vous sûr de vouloir supprimer ce album ?',
+    'tr_melis_lumen_notification_empty_name' => 'Please enter the album name',
+    'tr_melis_lumen_notification_empty_name_regex' => 'No special character(s) allowed',
+    'tr_melis_lumen_notification_songs_not_int' => 'Songs must be an integer',
+    /*
+     * modal text translations
+     */
+    'tr_melis_lumen_modal_add_title' => 'Ajouter album',
+    'tr_melis_lumen_modal_edit_title' => 'Editer album',
+    /*
+     * table text translations
+     */
+    'tr_melis_lumen_table_edit' => 'Editer',
+    'tr_melis_lumen_table_delete' => 'Supprimer',
+    'tr_melis_lumen_table_refresh' => 'Rafraichir',
+    /*
      * Plugin translations
      */
     'tr_melis_platform_framework_lumen_demo_tool_plugin_name' => 'Lumen Demo Plugin',
