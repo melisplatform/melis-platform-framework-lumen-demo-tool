@@ -4,6 +4,9 @@ var melisPlatformFrameworkLumenDemoTool = {
     refreshTool   : function(){
         melisHelper.zoneReload('id_melis_platform_framework_lumen_demo_tool', 'melis_platform_framework_lumen_demo_tool')
     },
+    refreshTable : function() {
+        $("#lumenDemoToolTable").DataTable().ajax.reload();
+    },
     saveAlbumData : function(data,callback,callbackFail){
         if (typeof(callback)==='undefined') callback = null;
         if (typeof(callbackFail)==='undefined') callbackFail = null;
@@ -34,7 +37,7 @@ var melisPlatformFrameworkLumenDemoTool = {
             melisCore.flashMessenger();
 
         });
-    },t
+    },
     deleteAlbum : function(id, callback){
 
         if (typeof(callback) ==='undefined') callback = null;
