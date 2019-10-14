@@ -16,7 +16,7 @@ return [
     /*
     * tool logic notification
     */
-    'tr_melis_lumen_notification_title' => 'Delete an album',
+    'tr_melis_lumen_notification_title' => 'Lumen tool demo',
     'tr_melis_lumen_notification_message_save_ko' => 'Unable to save album',
     'tr_melis_lumen_notification_message_save_ok' => 'Album successfully saved',
     'tr_melis_lumen_notification_message_update_ko' => 'Unable to update album',
