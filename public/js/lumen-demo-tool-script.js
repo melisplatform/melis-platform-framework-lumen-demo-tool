@@ -76,7 +76,11 @@ var melisPlatformFrameworkLumenDemoTool = {
     var melisKey = 'melis_platform_framework_lumen_demo_tool_modal_content';
 
     bodyLumen.on('click', ".add-lumen-album", function(){
-        melisHelper.createModal(zoneIdLumen,melisKey,true,[],modalUrlLumen)
+        var btn = $(this);
+        btn.attr('disabled','disabled');
+        melisHelper.createModal(zoneIdLumen,melisKey,true,[],modalUrlLumen, function(){
+            btn.removeAttr('disabled');
+        })
     });
     bodyLumen.on('click', ".btnEditLumenAlbum", function(){
         var id = $(this).parent().parent().parent().attr('id');
