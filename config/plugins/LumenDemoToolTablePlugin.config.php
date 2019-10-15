@@ -22,7 +22,6 @@ return array(
                         ],
                     ),
                     'melis' => array(
-                        'section' => 'MelisCms',
                         'subcategory' => array(
                             'id' => 'thirdPartyFrameworks',
                             'title' => 'Frameworks'
