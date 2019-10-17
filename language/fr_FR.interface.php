@@ -13,6 +13,8 @@ return [
     'tr_melis_lumen_table1_heading_songs tooltip' => 'Number of songs',
     'tr_melis_lumen_table1_heading_songs_head_album' => 'Album List',
     'tr_melis_lumen_table1_heading_songs_head_language' => 'Language List',
+    'tr_melis_lumen_table1_heading_date' => 'Date',
+    'tr_melis_lumen_table1_heading_date tooltip' => 'Date added',
     /*
      * tool notification
      */
