@@ -22,7 +22,6 @@ var melisPlatformFrameworkLumenDemoTool = {
                 if(typeof callback !== "undefined" && typeof callback === "function") {
                     callback();
                 }
-                $('.melis-lumen-refresh').trigger('click');
                melisHelper.melisOkNotification(data.textTitle, data.textMessage);
             }
             else
@@ -83,7 +82,7 @@ var melisPlatformFrameworkLumenDemoTool = {
         })
     });
     bodyLumen.on('click', ".btnEditLumenAlbum", function(){
-        var id = $(this).parent().parent().parent().attr('id');
+        var id = $(this).parent().parent().attr('id');
         var btn = $(this);
         // disable button
         btn.attr('disabled','disabled');
@@ -112,7 +111,7 @@ var melisPlatformFrameworkLumenDemoTool = {
      * delete an album
      */
     bodyLumen.on('click', ".btnDelLumenAlbum", function(){
-        var id = $(this).parent().parent().parent().attr('id');
+        var id = $(this).parent().parent().attr('id');
         melisCoreTool.confirm(
             translations.tr_meliscore_common_yes,
             translations.tr_meliscore_common_no,

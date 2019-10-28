@@ -15,6 +15,7 @@ class LumenDemoToolController extends AbstractActionController
     {
         // view model
         $view = new ViewModel();
+
         /**
          * melis platform frameworks service
          *
