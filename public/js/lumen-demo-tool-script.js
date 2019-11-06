@@ -13,12 +13,15 @@ var melisPlatformFrameworkLumenDemoTool = {
             $("#lumenDemoToolTable_wrapper").find("#loader").remove();
         });
     },
-    getToolModal : function(callback){
+    getToolModal : function(callback, id){
         if (typeof(callback) ==='undefined') callback = null;
         var data = "";
         melisPlatformFrameworkLumenDemoTool.currentRequest =  $.ajax({
             type: 'GET',
             url: '/melis/get-tool-modal',
+            data : {
+                albumId : id
+            },
         }).done(function (returnData) {
 
             if(typeof callback !== "undefined" && typeof callback === "function") {
@@ -109,7 +112,12 @@ var melisPlatformFrameworkLumenDemoTool = {
 
     bodyLumen.on('click', ".btnEditLumenAlbum", function(){
         var id = $(this).parent().parent().attr('id');
-        melisPlatformFrameworkLumenDemoTool.getAlbumById(id);
+        // append loader
+        $(".modal-dynamic-content").html(melisPlatformFrameworkLumenDemoTool.tempLoader);
+        // get the configured form
+        melisPlatformFrameworkLumenDemoTool.getToolModal(function(data){
+            $(".modal-dynamic-content").html(data);
+        },id);
     });
     bodyLumen.on('click', '#btn-save-lumen-album', function(){
         $("#lumen_demo_tool_add_album").submit();
