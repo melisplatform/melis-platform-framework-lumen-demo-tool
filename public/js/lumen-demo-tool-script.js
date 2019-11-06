@@ -1,15 +1,48 @@
 
 var melisPlatformFrameworkLumenDemoTool = {
     tempLoader    : "<div id=\"loader\" class=\"overlay-loader\"><img class=\"loader-icon spinning-cog\" src=\"/MelisCore/assets/images/cog12.svg\" data-cog=\"cog12\"></div>",
+    currentRequest : null,
     refreshTool   : function(){
         melisHelper.zoneReload('id_melis_platform_framework_lumen_demo_tool', 'melis_platform_framework_lumen_demo_tool')
     },
     refreshTable : function() {
-        $("#lumenDemoToolTable").DataTable().ajax.reload();
+        var targetTable = $("#lumenDemoToolTable");
+        // append loader
+        $("#lumenDemoToolTable_wrapper").append(melisPlatformFrameworkLumenDemoTool.tempLoader);
+        targetTable.DataTable().ajax.reload(function(){
+            $("#lumenDemoToolTable_wrapper").find("#loader").remove();
+        });
+    },
+    getToolModal : function(callback){
+        if (typeof(callback) ==='undefined') callback = null;
+        var data = "";
+        melisPlatformFrameworkLumenDemoTool.currentRequest =  $.ajax({
+            type: 'GET',
+            url: '/melis/get-tool-modal',
+        }).done(function (returnData) {
+
+            if(typeof callback !== "undefined" && typeof callback === "function") {
+                callback(returnData);
+            }
+
+            data = returnData;
+        });
+
+        return data;
+    },
+    getAlbumById : function(id) {
+        $.ajax({
+            type: 'GET',
+            url: '/melis/get-lumen-data/'+ id,
+            dataType: 'json',
+            encode: true
+        }).done(function (data) {
+            console.log(data);
+        });
     },
     saveAlbumData : function(data,callback,callbackFail){
-        if (typeof(callback)==='undefined') callback = null;
-        if (typeof(callbackFail)==='undefined') callbackFail = null;
+        if (typeof(callback) ==='undefined') callback = null;
+        if (typeof(callbackFail) ==='undefined') callbackFail = null;
 
         $.ajax({
             type        : 'POST',
@@ -74,21 +107,12 @@ var melisPlatformFrameworkLumenDemoTool = {
     var zoneIdLumen = 'melis_platform_framework_lumen_demo_tool_modal_content';
     var melisKey = 'melis_platform_framework_lumen_demo_tool_modal_content';
 
-    bodyLumen.on('click', ".add-lumen-album", function(){
-        var btn = $(this);
-        btn.attr('disabled','disabled');
-        melisHelper.createModal(zoneIdLumen,melisKey,true,[],modalUrlLumen, function(){
-            btn.removeAttr('disabled');
-        })
-    });
     bodyLumen.on('click', ".btnEditLumenAlbum", function(){
         var id = $(this).parent().parent().attr('id');
-        var btn = $(this);
-        // disable button
-        btn.attr('disabled','disabled');
-        melisHelper.createModal(zoneIdLumen,melisKey,true,{albumId : id},modalUrlLumen, function(){
-            btn.removeAttr('disabled');
-        })
+        melisPlatformFrameworkLumenDemoTool.getAlbumById(id);
+    });
+    bodyLumen.on('click', '#btn-save-lumen-album', function(){
+        $("#lumen_demo_tool_add_album").submit();
     });
     /*
      * submit form
@@ -131,6 +155,20 @@ var melisPlatformFrameworkLumenDemoTool = {
      */
     bodyLumen.on('click', '.melis-lumen-refresh', function(){
         melisPlatformFrameworkLumenDemoTool.refreshTool();
+    });
+    bodyLumen.on('click', '.add-lumen-album', function(){
+        // append loader
+        $(".modal-dynamic-content").html(melisPlatformFrameworkLumenDemoTool.tempLoader);
+        // get the configured form
+        melisPlatformFrameworkLumenDemoTool.getToolModal(function(data){
+            $(".modal-dynamic-content").html(data);
+        });
+    });
+    /*
+     * cancel ajax request when canceled
+     */
+    bodyLumen.on('hidden.bs.modal',"#lumenModal",function(){
+        melisPlatformFrameworkLumenDemoTool.currentRequest.abort();
     });
 
 })(jQuery);
