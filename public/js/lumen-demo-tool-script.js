@@ -87,7 +87,6 @@ var melisPlatformFrameworkLumenDemoTool = {
                 if(typeof callback !== "undefined" && typeof callback === "function") {
                     callback();
                 }
-                $('.melis-lumen-refresh').trigger('click');
                 melisHelper.melisOkNotification(data.textTitle, data.textMessage);
             }
             else
