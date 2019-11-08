@@ -13,13 +13,13 @@ return [
     /*
      * flash messages
      */
-    'tr_melis_lumen_notification_title' => 'Outil Demo en Lumen',
+    'tr_melis_lumen_notification_title' => 'Album',
     'tr_melis_lumen_notification_title_delete' => 'Supprimer un album',
     'tr_melis_lumen_notification_message_save_ko' => 'Unable to save album',
-    'tr_melis_lumen_notification_message_save_ok' => 'Album successfully saved',
+    'tr_melis_lumen_notification_message_save_ok' => 'Album sauvegardé avec succès',
     'tr_melis_lumen_notification_message_update_ko' => 'Unable to update album',
-    'tr_melis_lumen_notification_message_upate_ok' => 'Album succesfully updated',
-    'tr_melis_lumen_notification_message_delete_ok' => 'Album successfully deleted',
+    'tr_melis_lumen_notification_message_upate_ok' => 'Album mis à jour avec succès',
+    'tr_melis_lumen_notification_message_delete_ok' => 'Album supprimé avec succès',
     'tr_melis_lumen_notification_message_delete_message' => 'Etes-vous sûr de vouloir supprimer ce album ?',
 
 ];
