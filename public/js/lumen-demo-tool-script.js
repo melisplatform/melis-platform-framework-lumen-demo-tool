@@ -146,7 +146,7 @@ var melisPlatformFrameworkLumenDemoTool = {
         melisCoreTool.confirm(
             translations.tr_meliscore_common_yes,
             translations.tr_meliscore_common_no,
-            translations.tr_melis_lumen_notification_title,
+            translations.tr_melis_lumen_notification_title_delete,
             translations.tr_melis_lumen_notification_message_delete_message,
             function () {
                 // append loader

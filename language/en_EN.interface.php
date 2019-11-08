@@ -14,6 +14,7 @@ return [
      * flash messenger messages
      */
     'tr_melis_lumen_notification_title' => 'Album',
+    'tr_melis_lumen_notification_title_delete' => 'Delete album ',
     'tr_melis_lumen_notification_message_save_ko' => 'Unable to save album',
     'tr_melis_lumen_notification_message_save_ok' => 'Album successfully saved',
     'tr_melis_lumen_notification_message_update_ko' => 'Unable to update album',
