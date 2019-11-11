@@ -3,7 +3,11 @@ return [
     'third-party-framework' => [
         'index-path' => [
             '/Lumen/public/index.php'
+        ],
+        'translations' => [
+            \MelisPlatformFrameworkLumenDemoToolLogic\Providers\MelisAddTranslation::class
         ]
+
     ],
     'router' => [
         'routes' => [
