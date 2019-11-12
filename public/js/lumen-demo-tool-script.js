@@ -1,5 +1,6 @@
 
 var melisPlatformFrameworkLumenDemoTool = {
+    tableConfig : null,
     tempLoader    : "<div id=\"loader\" class=\"overlay-loader\"><img class=\"loader-icon spinning-cog\" src=\"/MelisCore/assets/images/cog12.svg\" data-cog=\"cog12\"></div>",
     currentRequest : null,
     refreshTool   : function(){
@@ -132,7 +133,7 @@ var melisPlatformFrameworkLumenDemoTool = {
         melisPlatformFrameworkLumenDemoTool.saveAlbumData(formData,function(){
             $(".lumen-modal-close").trigger('click');
             // reload the tool
-            melisPlatformFrameworkLumenDemoTool.refreshTool();
+            melisPlatformFrameworkLumenDemoTool.refreshTable();
         },function(){
             saveBtn.removeAttr('disabled')
         });
@@ -152,7 +153,7 @@ var melisPlatformFrameworkLumenDemoTool = {
                 // append loader
                 melisPlatformFrameworkLumenDemoTool.deleteAlbum(id,function(){
                     // refresh tool
-                    melisPlatformFrameworkLumenDemoTool.refreshTool();
+                    melisPlatformFrameworkLumenDemoTool.refreshTable();
                 });
             }
         );
