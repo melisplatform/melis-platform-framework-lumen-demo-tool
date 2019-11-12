@@ -133,7 +133,7 @@ var melisPlatformFrameworkLumenDemoTool = {
         melisPlatformFrameworkLumenDemoTool.saveAlbumData(formData,function(){
             $(".lumen-modal-close").trigger('click');
             // reload the tool
-            melisPlatformFrameworkLumenDemoTool.refreshTable();
+            melisPlatformFrameworkLumenDemoTool.refreshTool();
         },function(){
             saveBtn.removeAttr('disabled')
         });
@@ -153,7 +153,7 @@ var melisPlatformFrameworkLumenDemoTool = {
                 // append loader
                 melisPlatformFrameworkLumenDemoTool.deleteAlbum(id,function(){
                     // refresh tool
-                    melisPlatformFrameworkLumenDemoTool.refreshTable();
+                    melisPlatformFrameworkLumenDemoTool.refreshTool();
                 });
             }
         );
