@@ -1,3 +1,6 @@
 .lumen-album-head {
-    border-bottom: 1px solid #efefef;
+    margin-bottom:20px;
+}
+#lumenDemoToolTable_wrapper {
+    position: relative;
 }

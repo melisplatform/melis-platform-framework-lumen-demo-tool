@@ -3,7 +3,17 @@ return [
     'third-party-framework' => [
         'index-path' => [
             '/Lumen/public/index.php'
-        ]
+        ],
+        'translations' => [
+            'locale' => [
+                'en_EN' => [
+                    __DIR__ .'/../../melis-platform-framework-lumen-demo-tool-logic/language/en/translations.php'
+                ],
+                'fr_FR' => [
+                    __DIR__ .'/../../melis-platform-framework-lumen-demo-tool-logic/language/fr/translations.php'
+                ]
+            ],
+        ],
     ],
     'router' => [
         'routes' => [
