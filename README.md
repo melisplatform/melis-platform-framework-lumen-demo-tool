@@ -1,6 +1,6 @@
 # melis-platform-framework-lumen-demo-tool
 
-This module provides a simple tool inside melis-platform that display the content of Lumen.
+This demo tool has for goal to show how you can use the framework Lumen inside Melis Platform, so you're not locked on ZF.
 
 ### Prerequisites
 
