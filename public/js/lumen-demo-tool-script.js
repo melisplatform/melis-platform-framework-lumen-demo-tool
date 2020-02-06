@@ -30,6 +30,8 @@ var melisPlatformFrameworkLumenDemoTool = {
             }
 
             data = returnData;
+        }).fail(function() {
+            alert( translations.tr_meliscore_error_message );
         });
 
         return data;
@@ -42,6 +44,8 @@ var melisPlatformFrameworkLumenDemoTool = {
             encode: true
         }).done(function (data) {
             console.log(data);
+        }).fail(function() {
+            alert( translations.tr_meliscore_error_message );
         });
     },
     saveAlbumData : function(data,callback,callbackFail){
@@ -72,6 +76,8 @@ var melisPlatformFrameworkLumenDemoTool = {
             }
             melisCore.flashMessenger();
 
+        }).fail(function() {
+            alert( translations.tr_meliscore_error_message );
         });
     },
     deleteAlbum : function(id, callback){
@@ -98,85 +104,88 @@ var melisPlatformFrameworkLumenDemoTool = {
             }
             melisCore.flashMessenger();
             melisCoreTool.done("#btnProspectUpdate");
+        }).fail(function() {
+            alert( translations.tr_meliscore_error_message );
         });
     },
     
 };
 
 (function ($){
-
     var bodyLumen = $('body');
     var modalUrlLumen = '/melis/MelisPlatformFrameworkLumenDemoTool/LumenDemoTool/render-lumen-album-modal';
     var zoneIdLumen = 'melis_platform_framework_lumen_demo_tool_modal_content';
     var melisKey = 'melis_platform_framework_lumen_demo_tool_modal_content';
 
-    bodyLumen.on('click', ".btnEditLumenAlbum", function(){
-        var id = $(this).parent().parent().attr('id');
-        // append loader
-        $(".modal-dynamic-content").html(melisPlatformFrameworkLumenDemoTool.tempLoader);
-        // get the configured form
-        melisPlatformFrameworkLumenDemoTool.getToolModal(function(data){
-            $(".modal-dynamic-content").html(data);
-        },id);
-    });
-    bodyLumen.on('click', '#btn-save-lumen-album', function(){
-        $("#lumen_demo_tool_add_album").submit();
-    });
-    /*
-     * submit form
-     */
-    bodyLumen.on('submit',"#lumen_demo_tool_add_album",function(e){
-        e.preventDefault();
-        var saveBtn = $("#btn-save-lumen-album");
-        saveBtn.attr('disabled','disabled');
-        var formData = $(this).serializeArray();
-        melisPlatformFrameworkLumenDemoTool.saveAlbumData(formData,function(){
-            $(".lumen-modal-close").trigger('click');
-            // reload the tool
-            melisPlatformFrameworkLumenDemoTool.refreshTool();
-        },function(){
-            saveBtn.removeAttr('disabled')
+        bodyLumen.on('click', ".btnEditLumenAlbum", function(){
+            var id = $(this).parent().parent().attr('id');
+            // append loader
+            $(".modal-dynamic-content").html(melisPlatformFrameworkLumenDemoTool.tempLoader);
+            // get the configured form
+            melisPlatformFrameworkLumenDemoTool.getToolModal(function(data){
+                $(".modal-dynamic-content").html(data);
+            },id);
         });
 
-    });
-    /*
-     * delete an album
-     */
-    bodyLumen.on('click', ".btnDelLumenAlbum", function(){
-        var id = $(this).parent().parent().attr('id');
-        melisCoreTool.confirm(
-            translations.tr_meliscore_common_yes,
-            translations.tr_meliscore_common_no,
-            translations.tr_melis_lumen_notification_title_delete,
-            translations.tr_melis_lumen_notification_message_delete_message,
-            function () {
-                // append loader
-                melisPlatformFrameworkLumenDemoTool.deleteAlbum(id,function(){
-                    // refresh tool
-                    melisPlatformFrameworkLumenDemoTool.refreshTool();
-                });
-            }
-        );
-    });
-    /*
-     * refresh tool
-     */
-    bodyLumen.on('click', '.melis-lumen-refresh', function(){
-        melisPlatformFrameworkLumenDemoTool.refreshTool();
-    });
-    bodyLumen.on('click', '.add-lumen-album', function(){
-        // append loader
-        $(".modal-dynamic-content").html(melisPlatformFrameworkLumenDemoTool.tempLoader);
-        // get the configured form
-        melisPlatformFrameworkLumenDemoTool.getToolModal(function(data){
-            $(".modal-dynamic-content").html(data);
+        bodyLumen.on('click', '#btn-save-lumen-album', function(){
+            $("#lumen_demo_tool_add_album").submit();
         });
-    });
-    /*
-     * cancel ajax request when canceled
-     */
-    bodyLumen.on('hidden.bs.modal',"#lumenModal",function(){
-        melisPlatformFrameworkLumenDemoTool.currentRequest.abort();
-    });
+        
+        /*
+        * submit form
+        */
+        bodyLumen.on('submit',"#lumen_demo_tool_add_album",function(e){
+            e.preventDefault();
+            var saveBtn = $("#btn-save-lumen-album");
+            saveBtn.attr('disabled','disabled');
+            var formData = $(this).serializeArray();
+            melisPlatformFrameworkLumenDemoTool.saveAlbumData(formData,function(){
+                $(".lumen-modal-close").trigger('click');
+                // reload the tool
+                melisPlatformFrameworkLumenDemoTool.refreshTool();
+            },function(){
+                saveBtn.removeAttr('disabled')
+            });
+
+        });
+        /*
+        * delete an album
+        */
+        bodyLumen.on('click', ".btnDelLumenAlbum", function(){
+            var id = $(this).parent().parent().attr('id');
+            melisCoreTool.confirm(
+                translations.tr_meliscore_common_yes,
+                translations.tr_meliscore_common_no,
+                translations.tr_melis_lumen_notification_title_delete,
+                translations.tr_melis_lumen_notification_message_delete_message,
+                function () {
+                    // append loader
+                    melisPlatformFrameworkLumenDemoTool.deleteAlbum(id,function(){
+                        // refresh tool
+                        melisPlatformFrameworkLumenDemoTool.refreshTool();
+                    });
+                }
+            );
+        });
+        /*
+        * refresh tool
+        */
+        bodyLumen.on('click', '.melis-lumen-refresh', function(){
+            melisPlatformFrameworkLumenDemoTool.refreshTool();
+        });
+        bodyLumen.on('click', '.add-lumen-album', function(){
+            // append loader
+            $(".modal-dynamic-content").html(melisPlatformFrameworkLumenDemoTool.tempLoader);
+            // get the configured form
+            melisPlatformFrameworkLumenDemoTool.getToolModal(function(data){
+                $(".modal-dynamic-content").html(data);
+            });
+        });
+        /*
+        * cancel ajax request when canceled
+        */
+        bodyLumen.on('hidden.bs.modal',"#lumenModal",function(){
+            melisPlatformFrameworkLumenDemoTool.currentRequest.abort();
+        });
 
 })(jQuery);
