@@ -3,3 +3,7 @@
     color:#fff;
     line-height: normal;
 }
+.table-primary thead th {
+    background: #e61c23;
+    color: #fff;
+}
