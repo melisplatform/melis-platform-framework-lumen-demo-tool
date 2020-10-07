@@ -58,7 +58,7 @@ class LumenDemoToolDisplayTablePlugin extends MelisTemplatingPlugin
          *
          * @var \MelisPlatformFrameworks\Service\MelisPlatformService $frameworksService
          */
-        $frameworksService = $this->getServiceLocator()->get('MelisPlatformService');
+        $frameworksService = $this->getServiceManager()->get('MelisPlatformService');
         // set route
         $frameworksService->setRoute($this->lumenRoute);
         // get the content
