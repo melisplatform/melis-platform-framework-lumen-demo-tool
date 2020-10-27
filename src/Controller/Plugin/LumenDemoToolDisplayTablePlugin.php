@@ -90,47 +90,6 @@ class LumenDemoToolDisplayTablePlugin extends MelisTemplatingPlugin
 
         return $data;
     }
-    public function createOptionsForms()
-    {
-        // construct form
-        $factory = new \Laminas\Form\Factory();
-        $formElements = $this->getServiceLocator()->get('FormElementManager');
-        $factory->setFormElementManager($formElements);
-        $formConfig = $this->pluginBackConfig['modal_form'];
-
-        $response = [];
-        $render   = [];
-        if (!empty($formConfig)) {
-            foreach ($formConfig as $formKey => $config) {
-                $request = $this->getServiceLocator()->get('request');
-                $parameters = $request->getQuery()->toArray();
-
-                if (!isset($parameters['validate'])) {
-
-                    $viewModelTab = new ViewModel();
-                    $viewModelTab->setTemplate($config['tab_form_layout']);
-                    $viewRender = $this->getServiceLocator()->get('ViewRenderer');
-                    $html = $viewRender->render($viewModelTab);
-
-                    array_push($render, [
-                            'name' => $config['tab_title'],
-                            'icon' => $config['tab_icon'],
-                            'html' => $html,
-                            'empty' => 'Empty'
-                        ]
-                    );
-                }
-            }
-        }
-
-        if (!isset($parameters['validate'])) {
-            return $render;
-        }
-        else {
-            return $response;
-        }
-
-    }
     /**
      * This method will decode the XML in DB to make it in the form of the plugin config file
      * so it can overide it. Only front key is needed to update.
