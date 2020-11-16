@@ -29,4 +29,5 @@
     "psr-4": {
       "MelisPlatformFrameworkLumenDemoTool\\": "src/"
     }
+  }
 }
