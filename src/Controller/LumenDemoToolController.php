@@ -1,10 +1,10 @@
 <?php
 namespace MelisPlatformFrameworkLumenDemoTool\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\ViewModel;
+use MelisCore\Controller\MelisAbstractActionController;
+use Laminas\View\Model\ViewModel;
 
-class LumenDemoToolController extends AbstractActionController
+class LumenDemoToolController extends MelisAbstractActionController
 {
     private $lumenUrl = "/melis/lumen-list";
     /**
@@ -21,7 +21,7 @@ class LumenDemoToolController extends AbstractActionController
          *
          * @var \MelisPlatformFrameworks\Service\MelisPlatformService $frameworksService
          */
-        $frameworksService = $this->getServiceLocator()->get('MelisPlatformService');
+        $frameworksService = $this->getServiceManager()->get('MelisPlatformService');
         // set url
         $frameworksService->setRoute($this->lumenUrl);
         // get content
@@ -57,7 +57,7 @@ class LumenDemoToolController extends AbstractActionController
          *
          * @var \MelisPlatformFrameworks\Service\MelisPlatformService $frameworksService
          */
-        $frameworksService = $this->getServiceLocator()->get('MelisPlatformService');
+        $frameworksService = $this->getServiceManager()->get('MelisPlatformService');
         $route = '/melis/lumen-get-album-form?albumId=' . $albumId;
         // set url
         $frameworksService->setRoute($route);

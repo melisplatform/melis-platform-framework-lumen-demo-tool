@@ -15,9 +15,9 @@
     "module"
   ],
   "require" : {
-    "melisplatform/melis-platform-frameworks" : "^3.2",
-    "melisplatform/melis-platform-framework-lumen" : "^3.2",
-    "melisplatform/melis-platform-framework-lumen-demo-tool-logic" : "^3.2"
+    "melisplatform/melis-platform-frameworks" : "^4.0",
+    "melisplatform/melis-platform-framework-lumen" : "^4.0",
+    "melisplatform/melis-platform-framework-lumen-demo-tool-logic" : "^4.0"
   },
   "extra": {
     "module-name": "MelisPlatformFrameworkLumenDemoTool",
@@ -29,5 +29,4 @@
     "psr-4": {
       "MelisPlatformFrameworkLumenDemoTool\\": "src/"
     }
-  }
 }
