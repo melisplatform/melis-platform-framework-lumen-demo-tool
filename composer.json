@@ -1,33 +1,33 @@
 {
-  "name": "melisplatform/melis-platform-framework-lumen-demo-tool",
-  "description": "Melis Platform Code Example Lumen module",
-  "type": "melisplatform-module",
-  "license": "OSL-3.0",
-  "homepage": "https://github.com/melisplatform/melis-platform-framework-lumen-demo-tool",
-  "support": {
-    "source": "https://github.com/melisplatform/melis-platform-framework-lumen-demo-tool",
-    "issues": "https://github.com/melisplatform/melis-platform-framework-lumen-demo-tool/issues"
-  },
-  "keywords": [
-    "cms",
-    "melis",
-    "zf2",
-    "module"
-  ],
-  "require" : {
-    "melisplatform/melis-platform-frameworks" : "^4.0",
-    "melisplatform/melis-platform-framework-lumen" : "^4.0",
-    "melisplatform/melis-platform-framework-lumen-demo-tool-logic" : "^4.0"
-  },
-  "extra": {
-    "module-name": "MelisPlatformFrameworkLumenDemoTool",
-    "dbdeploy": true,
-    "melis-site": false,
-    "melis-module-category": "core"
-  },
-  "autoload": {
-    "psr-4": {
-      "MelisPlatformFrameworkLumenDemoTool\\": "src/"
+    "name": "melisplatform/melis-platform-framework-lumen-demo-tool",
+    "description": "Melis Platform Code Example Lumen module",
+    "type": "melisplatform-module",
+    "license": "OSL-3.0",
+    "homepage": "https://github.com/melisplatform/melis-platform-framework-lumen-demo-tool",
+    "support": {
+        "source": "https://github.com/melisplatform/melis-platform-framework-lumen-demo-tool",
+        "issues": "https://github.com/melisplatform/melis-platform-framework-lumen-demo-tool/issues"
+    },
+    "keywords": [
+        "cms",
+        "melis",
+        "zf2",
+        "module"
+    ],
+    "require": {
+        "melisplatform/melis-platform-frameworks": "^5.0",
+        "melisplatform/melis-platform-framework-lumen": "^5.0",
+        "melisplatform/melis-platform-framework-lumen-demo-tool-logic": "^5.0"
+    },
+    "extra": {
+        "module-name": "MelisPlatformFrameworkLumenDemoTool",
+        "dbdeploy": true,
+        "melis-site": false,
+        "melis-module-category": "core"
+    },
+    "autoload": {
+        "psr-4": {
+            "MelisPlatformFrameworkLumenDemoTool\\": "src/"
+        }
     }
-  }
 }
