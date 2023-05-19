@@ -29,7 +29,7 @@ CREATE TABLE `melis_demo_album` (
   `alb_name` varchar(255) NOT NULL,
   `alb_date` date NOT NULL,
   `alb_song_num` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB;
 
 --
 -- Dumping data for table `melis_demo_album`
